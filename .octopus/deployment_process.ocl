@@ -69,8 +69,8 @@ step "notify-developers-of-status" {
     action {
         action_type = "Octopus.Email"
         properties = {
-            Octopus.Action.Email.Body = "#{Notification.Subject.Text}"
-            Octopus.Action.Email.Subject = "#{Notification.Body.Text}"
+            Octopus.Action.Email.Body = "#{Notification.Body.Text}"
+            Octopus.Action.Email.Subject = "#{Notification.Subject.Text}"
             Octopus.Action.Email.ToTeamIds = "trident-notifications"
         }
         worker_pool_variable = ""
